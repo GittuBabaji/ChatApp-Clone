@@ -1,12 +1,12 @@
 <p align="center">
-  <img src="public/readme-banner.png" alt="Discord Clone Banner" width="100%" />
+  <img src="public/readme-banner.png" alt="Aslfa Banner" width="100%" />
 </p>
 
-<h1 align="center">💬 Discord Clone — Full-Stack Real-Time Chat App</h1>
+<h1 align="center">🚀 Aslfa — Real-Time Communication Platform</h1>
 
 <p align="center">
-  A feature-rich, real-time Discord clone built with <strong>Next.js 15</strong>, <strong>React 18</strong>, <strong>Socket.io</strong>, <strong>Prisma</strong>, <strong>Clerk</strong>, and <strong>LiveKit</strong>.<br/>
-  Supports servers, channels, direct messages, video/voice calls, role management, file uploads, and more.
+  <strong>Aslfa</strong> is a full-stack, real-time communication platform built with <strong>Next.js 15</strong>, <strong>React 18</strong>, <strong>Socket.io</strong>, <strong>Prisma</strong>, <strong>Clerk</strong>, and <strong>LiveKit</strong>.<br/>
+  Create communities, chat in real-time, share files, and jump into voice & video calls — all in one place.
 </p>
 
 <p align="center">
@@ -24,20 +24,20 @@
 
 | Category | Feature |
 |---|---|
-| 🔐 **Authentication** | Full sign-up / sign-in via Clerk (OAuth + email) |
-| 🏠 **Servers** | Create, edit, delete servers with custom images |
-| 📢 **Channels** | Text, Voice, and Video channel types |
-| 💬 **Real-Time Messaging** | Instant messages via Socket.io with infinite scroll |
-| 📎 **File Sharing** | Upload images & PDFs via UploadThing |
-| ✏️ **Message Management** | Edit & delete messages in real-time |
-| 👥 **Member Management** | Role system (Admin / Member / Guest) with kick & role change |
-| 🔗 **Invite System** | Unique invite links with regeneration |
-| 📩 **Direct Messages** | 1:1 conversations between server members |
-| 🎥 **Video & Voice** | Real-time video/voice calls via LiveKit |
-| 🔍 **Server Search** | Search channels & members with keyboard shortcut (`Ctrl+K`) |
-| 🌙 **Dark / Light Mode** | Theme toggle with `next-themes` |
-| 📱 **Responsive** | Mobile-friendly layout with sheet-based sidebar |
-| 😀 **Emoji Picker** | Rich emoji support via `emoji-mart` |
+| 🔐 **Authentication** | Secure sign-up / sign-in via Clerk (OAuth + email) |
+| 🏠 **Servers** | Create, customize, edit & delete your own community servers |
+| 📢 **Channels** | Text, Voice, and Video channel types per server |
+| 💬 **Real-Time Messaging** | Instant message delivery via Socket.io with infinite scroll |
+| 📎 **File Sharing** | Upload & share images and PDFs seamlessly via UploadThing |
+| ✏️ **Message Management** | Edit & delete your messages in real-time |
+| 👥 **Member Management** | Role system (Admin / Member / Guest) — promote, demote, or kick members |
+| 🔗 **Invite System** | Generate unique invite links to bring people into your server |
+| 📩 **Direct Messages** | Private 1:1 conversations between server members |
+| 🎥 **Video & Voice Calls** | Real-time video & voice calls powered by LiveKit |
+| 🔍 **Smart Search** | Search channels & members instantly with keyboard shortcut (`Ctrl+K`) |
+| 🌙 **Dark / Light Mode** | Seamless theme toggle |
+| 📱 **Responsive Design** | Fully mobile-friendly with adaptive sidebar |
+| 😀 **Emoji Picker** | Rich emoji support with emoji-mart |
 | ♾️ **Infinite Scrolling** | Paginated message loading with TanStack Query |
 
 ---
@@ -57,7 +57,7 @@
 - **Data Fetching:** [TanStack React Query](https://tanstack.com/query)
 
 ### Backend
-- **API:** Next.js API Routes + Pages API (for Socket.io)
+- **API:** Next.js API Routes + Pages API (Socket.io)
 - **Database:** PostgreSQL via [Prisma](https://www.prisma.io/) ORM + Prisma Accelerate
 - **Authentication:** [Clerk](https://clerk.com/)
 - **Real-Time:** [Socket.io](https://socket.io/)
@@ -69,7 +69,7 @@
 ## 📁 Project Structure
 
 ```
-ChatApp-Clone/
+Aslfa/
 ├── app/
 │   ├── (auth)/                    # Auth routes (sign-in, sign-up)
 │   │   ├── (route)/
@@ -105,10 +105,10 @@ ChatApp-Clone/
 │   │   ├── ChatWelcome.tsx        # Welcome message for channels
 │   │   ├── chat-header.tsx        # Chat area header
 │   │   ├── chat-input.tsx         # Message input with emoji & file upload
-│   │   ├── chat-item.tsx          # Individual message display
+│   │   ├── chat-item.tsx          # Individual message bubble
 │   │   ├── chat-messages.tsx      # Message list with infinite scroll
-│   │   └── socket-indicator.tsx   # Connection status indicator
-│   ├── modals/                    # All modal dialogs
+│   │   └── socket-indicator.tsx   # Real-time connection status
+│   ├── modals/                    # Modal dialogs
 │   │   ├── create-server-modal.tsx
 │   │   ├── edit-server.tsx
 │   │   ├── DeleteServer.tsx
@@ -123,7 +123,7 @@ ChatApp-Clone/
 │   │   └── initial-model.tsx
 │   ├── nav/                       # Navigation bar
 │   │   ├── Navigation-bar.tsx     # Server list sidebar
-│   │   ├── Navigation-item.tsx    # Individual server icon
+│   │   ├── Navigation-item.tsx    # Server icon item
 │   │   ├── Navigation-tool.tsx    # Tooltip wrapper
 │   │   └── action-button.tsx      # Add server button
 │   ├── side-bar/                  # Server sidebar
@@ -140,9 +140,9 @@ ChatApp-Clone/
 │   │   ├── query-provider.tsx     # TanStack Query client
 │   │   └── file-upload.tsx        # UploadThing wrapper
 │   ├── ui/                        # Shadcn/ui base components
-│   ├── ClientWrappen.tsx          # Client-side wrapper
-│   ├── EmojiPiclert.tsx           # Emoji picker component
 │   ├── media-room.tsx             # LiveKit video/voice room
+│   ├── EmojiPiclert.tsx           # Emoji picker
+│   ├── ClientWrappen.tsx          # Client-side wrapper
 │   └── user-avatar.tsx            # User avatar display
 │
 ├── hooks/                         # Custom React hooks
@@ -260,7 +260,7 @@ erDiagram
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) 18+ 
+- [Node.js](https://nodejs.org/) 18+
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 - A PostgreSQL database (or use [Prisma Accelerate](https://www.prisma.io/accelerate))
 - Accounts on: [Clerk](https://clerk.com/), [UploadThing](https://uploadthing.com/), [LiveKit](https://livekit.io/)
@@ -336,7 +336,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ---
 
-## 🔑 Key Environment Variables
+## 🔑 Environment Variables
 
 | Variable | Description | Required |
 |---|---|---|
